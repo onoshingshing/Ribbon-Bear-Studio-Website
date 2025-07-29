@@ -1,0 +1,242 @@
+/* ====== 背景動畫與整體設置 ====== */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(-45deg, #F5E8D8, #FFF9C4, #F0F8E8, #F5E8D8);
+    background-size: 400% 400%;
+    animation: gradient-shift 8s ease infinite;
+    color: #333;
+}
+
+/* 動畫定義：流動背景 */
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50%      { background-position: 100% 50%; }
+}
+
+/* ====== Header、Footer、Logo ====== */
+header {
+    background-color: #A4D7E1;
+    padding: 1em 0;
+    text-align: center;
+    color: #222;
+}
+footer {
+    background-color: #A4D7E1;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    color: #222;
+}
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 0.5em auto;
+    display: block;
+}
+.footer-qr {
+    width: 100px;
+    height: 100px;
+    margin-top: 1em;
+}
+
+/* ====== Navbar 與動畫效果 ====== */
+nav {
+    background-color: #FFC1CC;
+    padding: 1em;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, background 0.4s, color 0.4s, box-shadow 0.3s;
+    cursor: pointer;
+}
+nav a:hover {
+    transform: scale(1.1);
+    animation: bounce 0.6s;
+    background: linear-gradient(90deg,#A4D7E1,#FFC1CC 70%);
+    color: #333;
+    box-shadow: 0 0 24px 4px #FFC1CC80, 0 8px 32px #A4D7E180;
+}
+nav a:active {
+    transform: scale(0.92) rotate(-1deg);
+    box-shadow: 0 2px 0 #F5E8D8 inset;
+}
+nav a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #A4D7E1, #FFC1CC, #F5E8D8);
+    border-radius: 2px 2px 0 0;
+    transition: width 0.4s cubic-bezier(.4,0,.2,1), left 0.4s cubic-bezier(.4,0,.2,1), background 0.5s;
+}
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+    background: linear-gradient(90deg, #FFC1CC, #A4D7E1 80%);
+}
+
+/* ====== Hero 區塊 ====== */
+.hero {
+    text-align: center;
+    padding: 3em 1em;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('instagram-kids-class.jpg');
+    background-size: cover;
+    color: #fff;
+}
+/* Make slogan (h1) and subtitle (p) in hero section white for best contrast */
+.hero h1,
+.hero p {
+    color: #fff !important;
+}
+.hero h1 { font-size: 2.5em; margin: 0; }
+
+/* ====== 內容與圖片排列 ====== */
+.content { 
+    max-width: 1200px; 
+    margin: 2em auto; 
+    padding: 0 1em;
+    /* No background, box, or shadow — full transparency */
+}
+.photo-gallery {
+    display: flex;
+    gap: 2em;
+    margin: 2em 0;
+    justify-content: center;
+}
+.photo-item { flex: 1; max-width: 35%; }
+.photo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ====== Caption 樣式（可愛手寫字＋隨機淡色/漸層底） ====== */
+.photo-caption {
+    display: inline-block;
+    text-align: center;
+    margin-top: 0.8em;
+    margin-bottom: 0;
+    font-size: 1.3em;
+    line-height: 1.6;
+    font-family: 'Patrick Hand', 'Comic Sans MS', 'DFKai-SB', 'Segoe Print', 'Chalkduster', cursive;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    color: #2a2a2a;
+    background: #FFF9C4;
+    padding: 0.36em 1em;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px #FFD9;
+    transform: rotate(-2deg);
+    text-shadow: none;
+}
+
+/* ====== CTA 按鈕動畫與角色放大 ====== */
+.cta-button {
+    display: inline-block;
+    background-color: #FFC1CC;
+    color: #333;
+    padding: 0.8em 1.5em;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1em;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background 0.4s, color 0.4s, box-shadow 0.3s, transform 0.2s;
+    position: relative;
+    cursor: pointer;
+}
+.cta-button:hover {
+    animation: bounce 0.6s;
+    background: linear-gradient(90deg,#A4D7E1,#FFC1CC 70%);
+    color: #333;
+    box-shadow: 0 0 24px 4px #FFC1CC80, 0 8px 32px #A4D7E180;
+}
+.cta-button:active {
+    transform: scale(0.92) rotate(-1deg);
+    box-shadow: 0 2px 0 #F5E8D8 inset;
+}
+.cta-button img, .cta-button svg {
+    transition: transform 0.3s ease-in-out;
+}
+.cta-button:hover img,
+.cta-button:hover svg {
+    transform: scale(1.2);
+}
+
+/* ====== 彈跳動畫 ====== */
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    30% { transform: scale(1.15); }
+    50% { transform: scale(0.97); }
+    70% { transform: scale(1.06); }
+}
+
+/* ====== confetti（氣球彩帶飄落） ====== */
+.confetti {
+    position: fixed;
+    top: -30px;
+    z-index: 90;
+    opacity: .85;
+    pointer-events: none;
+    animation: confetti-fall linear;
+}
+@keyframes confetti-fall {
+    0% { transform: translateY(0) rotate(0deg) scale(1);}
+    60% { opacity: 1;}
+    100% { 
+        transform: translateY(110vh) rotate(320deg) scale(0.8); 
+        opacity: 0.6;
+    }
+}
+
+/* ====== 響應式設計 ====== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+    .hero h1 { font-size: 1.8em; }
+    .logo { width: 120px; height: 120px; }
+    .footer-qr { width: 70px; height: 70px; }
+    .photo-gallery { flex-direction: column; gap: 1.5em; }
+    .photo-item { max-width: 100%; }
+}
+
+/* ====== 強制 Logo 及文字大小（確保一致） ====== */
+header .logo, footer .logo {
+    width: 150px !important;
+    height: 150px !important;
+}
+
+@media (max-width: 768px) {
+    header .logo, footer .logo {
+        width: 120px !important;
+        height: 120px !important;
+    }
+}
+
+body, h1, h2, p {
+    color: #333 !important;
+    font-size: inherit !important;
+}
