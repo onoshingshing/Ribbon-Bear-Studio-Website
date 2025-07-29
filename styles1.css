@@ -1,4 +1,4 @@
-/* ====== ­I´º°Êµe»P¾ãÅé³]¸m ====== */
+/* ====== èƒŒæ™¯å‹•ç•«èˆ‡æ•´é«”è¨­ç½® ====== */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -8,13 +8,13 @@ body {
     color: #333;
 }
 
-/* °Êµe©w¸q¡G¬y°Ê­I´º */
+/* å‹•ç•«å®šç¾©ï¼šæµå‹•èƒŒæ™¯ */
 @keyframes gradient-shift {
     0%, 100% { background-position: 0% 50%; }
     50%      { background-position: 100% 50%; }
 }
 
-/* ====== Header¡BFooter¡BLogo ====== */
+/* ====== Headerã€Footerã€Logo ====== */
 header {
     background-color: #A4D7E1;
     padding: 1em 0;
@@ -40,7 +40,7 @@ footer {
     margin-top: 1em;
 }
 
-/* ====== Navbar »P°Êµe®ÄªG ====== */
+/* ====== Navbar èˆ‡å‹•ç•«æ•ˆæœ ====== */
 nav {
     background-color: #FFC1CC;
     padding: 1em;
@@ -92,7 +92,7 @@ nav a:hover::after {
     background: linear-gradient(90deg, #FFC1CC, #A4D7E1 80%);
 }
 
-/* ====== Hero °Ï¶ô ====== */
+/* ====== Hero å€å¡Š ====== */
 .hero {
     text-align: center;
     padding: 3em 1em;
@@ -102,7 +102,7 @@ nav a:hover::after {
 }
 .hero h1 { font-size: 2.5em; margin: 0; }
 
-/* ====== ¤º®e»P¹Ï¤ù±Æ¦C ====== */
+/* ====== å…§å®¹èˆ‡åœ–ç‰‡æ’åˆ— ====== */
 .content { max-width: 1200px; margin: 2em auto; padding: 0 1em; }
 .photo-gallery {
     display: flex;
@@ -118,7 +118,7 @@ nav a:hover::after {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* ====== Caption ¼Ë¦¡¡]¥i·R¤â¼g¦r¡ÏÀH¾÷²H¦â/º¥¼h©³¡^ ====== */
+/* ====== Caption æ¨£å¼ï¼ˆå¯æ„›æ‰‹å¯«å­—ï¼‹éš¨æ©Ÿæ·¡è‰²/æ¼¸å±¤åº•ï¼‰ ====== */
 .photo-caption {
     display: inline-block;
     text-align: center;
@@ -129,8 +129,8 @@ nav a:hover::after {
     font-family: 'Patrick Hand', 'Comic Sans MS', 'DFKai-SB', 'Segoe Print', 'Chalkduster', cursive;
     font-weight: bold;
     letter-spacing: 0.04em;
-    color: #2a2a2a; /* ²`¦Ç */
-    background: #FFF9C4; /* ¹w³]¡AJS·|»\±¼¦¨ÀH¾÷±m¦â/º¥¼h */
+    color: #2a2a2a; /* æ·±ç° */
+    background: #FFF9C4; /* é è¨­ï¼ŒJSæœƒè“‹æ‰æˆéš¨æ©Ÿå½©è‰²/æ¼¸å±¤ */
     padding: 0.36em 1em;
     border-radius: 14px;
     box-shadow: 0 2px 8px #FFD9;
@@ -138,7 +138,7 @@ nav a:hover::after {
     text-shadow: none;
 }
 
-/* ====== CTA «ö¶s°Êµe»P¨¤¦â©ñ¤j ====== */
+/* ====== CTA æŒ‰éˆ•å‹•ç•«èˆ‡è§’è‰²æ”¾å¤§ ====== */
 .cta-button {
     display: inline-block;
     background-color: #FFC1CC;
@@ -171,7 +171,7 @@ nav a:hover::after {
     transform: scale(1.2);
 }
 
-/* ====== ¼u¸õ°Êµe ====== */
+/* ====== å½ˆè·³å‹•ç•« ====== */
 @keyframes bounce {
     0%, 100% { transform: scale(1); }
     30% { transform: scale(1.15); }
@@ -179,7 +179,7 @@ nav a:hover::after {
     70% { transform: scale(1.06); }
 }
 
-/* ====== confetti¡]®ğ²y±m±aÄÆ¸¨¡^ ====== */
+/* ====== confettiï¼ˆæ°£çƒå½©å¸¶é£„è½ï¼‰ ====== */
 .confetti {
     position: fixed;
     top: -30px;
@@ -197,7 +197,7 @@ nav a:hover::after {
     }
 }
 
-/* ====== ÅTÀ³¦¡³]­p ====== */
+/* ====== éŸ¿æ‡‰å¼è¨­è¨ˆ ====== */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
